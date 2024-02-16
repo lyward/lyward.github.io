@@ -1,3 +1,3 @@
 # lyward.github.io
 
-Test!
+This repository contains all of the files used to create Lyra Ward's portfolio.
