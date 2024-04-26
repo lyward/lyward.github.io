@@ -13,8 +13,8 @@
 
   <body>
     <div class="tab">
-      <button class="tablinks">About Me</button>
-      <button class="tablinks">Resume</button>
+      <button class="tablinks" onclick="openSection(event, 'About Me')">About Me</button>
+      <button class="tablinks" onclick="openSection(event, 'Resume')">Resume</button>
     </div>
 
     <div id="About Me" class="tabcontent">
@@ -69,5 +69,21 @@
             <li>Provides assistance to customers.</li>
           </p>
     </div>
+
+    <script>
+    function openSection(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
   </body>
 </html>
