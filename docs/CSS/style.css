@@ -11,8 +11,7 @@ body {
 }
 
 .tab {
-  background-color: white;
-  color: black
+  background-color: #7f4488;
   padding: 10px 20px;
   cursor: pointer;
 }
@@ -22,7 +21,8 @@ body {
 }
 
 .active-tab {
-  background-color: green;
+  background-color: white;
+  color: black;
 }
 
 .active-content {
