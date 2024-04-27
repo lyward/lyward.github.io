@@ -11,7 +11,8 @@ body {
 }
 
 .tab {
-  background-color: #ddd;
+  background-color: white;
+  color: black
   padding: 10px 20px;
   cursor: pointer;
 }
