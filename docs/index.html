@@ -12,12 +12,12 @@
   </head>
 
   <body>
-    <div class="tab">
-      <button class="tablinks" onclick="openSection(event, 'About Me')">About Me</button>
-      <button class="tablinks" onclick="openSection(event, 'Resume')">Resume</button>
+    <div class="tab-container">
+      <button class="tablinks" onclick="openTab('About Me')">About Me</button>
+      <button class="tablinks" onclick="openTab('Resume')">Resume</button>
     </div>
 
-    <div id="About Me" class="tabcontent">
+    <div id="About Me" class="tab-content active-content">
       <h1>Hi, my name is Lyra Ward! (she/her)</h1>
         <h2>About me:</h2>
           <p>
@@ -27,7 +27,7 @@
           </p>
     </div>
 
-    <div id="Resume" class="tabcontent">
+    <div id="Resume" class="tab-content">
       <h2>Technical skills:</h2>
         <p>
           <li>-Programming languages: Java, Ruby, C, Haskell, and Rust</li>
@@ -71,18 +71,22 @@
     </div>
 
     <script>
-    function openSection(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(cityName).style.display = "block";
-      evt.currentTarget.className += " active";
+    function openTab(tabId) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName('tab-content');
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].style.display = 'none';
+        }
+
+        // Remove 'active-tab' class from all tabs
+        var tabs = document.getElementsByClassName('tab');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove('active-tab');
+        }
+
+        // Show the selected tab content and mark it as active
+        document.getElementById(tabId).style.display = 'block';
+        document.querySelector('[onclick="openTab(\'' + tabId + '\')"]').classList.add('active-tab');
     }
     </script>
   </body>
