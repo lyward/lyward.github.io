@@ -57,3 +57,10 @@ li {
   width: 980px;
   margin: auto;
 }
+
+img {
+  height: 191px;
+  position: relative;
+  left: 250px;
+  border-radius: 50%;
+}
