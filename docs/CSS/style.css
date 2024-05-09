@@ -35,3 +35,24 @@ div {
   border: 1px solid white;
   background-color: #b074b9;
 }
+
+p {
+  width: 960px;
+  margin: auto;
+}
+
+h1 {
+  width: 980px;
+  margin: auto;
+}
+
+h2 {
+  width: 960px;
+  margin: auto;
+}
+
+li {
+  width: 960px;
+  margin: auto;
+  height: 30px;
+}
