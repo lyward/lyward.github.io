@@ -28,3 +28,9 @@ body {
 .active-content {
   display: block;
 }
+
+div {
+  width: 300px;
+  margin: auto;
+  border: 1px solid red;
+}
