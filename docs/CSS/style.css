@@ -1,5 +1,5 @@
 body {
-  background-color: #b074b9;
+  background-color: #805498;
   color: white;
   font-family: 'Quicksand', sans-serif;
 }
@@ -33,6 +33,5 @@ div {
   width: 1000px;
   margin: auto;
   border: 1px solid white;
+  background-color: #b074b9;
 }
-
-
